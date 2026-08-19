@@ -1,5 +1,17 @@
+# Core ML
 tensorflow
 numpy
 pandas
 matplotlib
 scikit-learn
+
+# Task 1 — Grad-CAM
+opencv-python
+Pillow
+
+# Task 2 — SHAP explainability
+shap
+lightgbm
+
+# Task 3 — PDF report generation
+reportlab
