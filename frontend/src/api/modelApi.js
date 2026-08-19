@@ -1,0 +1,6 @@
+import { mockAnalyze } from "../mock/modelMock.js";
+const base = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+const mock = import.meta.env.VITE_USE_MOCK_API === "true";
+const labels = ["No DR", "Mild", "Moderate", "Severe", "Proliferative DR"];
+export function normalizeModelResponse(raw) { const grade = raw.predictedClass ?? raw.predicted_grade ?? raw.grade ?? null; return { ...raw, predictedLabel: raw.predictedLabel || raw.severity || raw.label || (grade == null ? "Awaiting model result" : labels[grade]), predictedClass: grade, probabilities: raw.probabilities || {}, confidence: raw.confidence ?? null }; }
+export async function analyzeRetina(file) { if (mock) return normalizeModelResponse(await mockAnalyze(file ? URL.createObjectURL(file) : null)); const form = new FormData(); form.append("image", file); const response = await fetch(`${base}/screening/predict`, { method: "POST", body: form }); if (!response.ok) { const body = await response.json().catch(() => ({})); throw new Error(body.detail || "Unable to process this retinal image."); } return normalizeModelResponse(await response.json()); }

@@ -1,0 +1,5 @@
+import React, { createContext, useContext, useState } from "react";
+import { analyzeRetina } from "../api/modelApi.js";
+const ScreeningContext = createContext(null);
+export function ScreeningProvider({ children }) { const [result, setResult] = useState(null); const [image, setImage] = useState(null); const [file, setFile] = useState(null); const [loading, setLoading] = useState(false); const analyze = async (nextFile) => { setLoading(true); setFile(nextFile); setImage(URL.createObjectURL(nextFile)); try { const data = await analyzeRetina(nextFile); setResult(data); return data; } finally { setLoading(false); } }; return React.createElement(ScreeningContext.Provider, { value: { result, image, file, loading, analyze } }, children); }
+export function useScreening() { return useContext(ScreeningContext); }

@@ -1,0 +1,2 @@
+# Install this file with Python 3.11-3.13 for real model prediction/Grad-CAM.
+tensorflow>=2.15,<3

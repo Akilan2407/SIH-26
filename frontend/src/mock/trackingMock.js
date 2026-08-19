@@ -1,0 +1,1 @@
+export function mockTracking() { return Promise.resolve({ modelVersion: "Pending", datasetVersion: "Pending", trainingRun: "Pending", metrics: { accuracy: null, auc: null, qwk: null }, confusionMatrix: null }); }
