@@ -221,3 +221,26 @@ button { cursor: pointer; }
 .spin { animation: spin 1s linear infinite; } @keyframes spin { to { transform: rotate(360deg); } }
 @media (max-width: 900px) { .sidebar { width: 205px; flex-basis: 205px; }.content { padding: 32px 27px 50px; }.topbar { padding: 0 27px; }.stats-grid, .tracking-grid { grid-template-columns: repeat(2, 1fr); }.upload-layout, .assistant-layout { grid-template-columns: 1fr; }.process-card { display: none; } }
 @media (max-width: 650px) { .sidebar { display: none; }.content { padding: 28px 17px 45px; }.topbar { padding: 0 17px; }.mobile-menu { display: grid; }.page-heading, .page-heading.compact { display: block; }.page-heading h1 { font-size: 29px; }.mode-pill, .screening-id, .page-heading .button, .page-heading .tab-switch, .page-heading > .status-tag { margin-top: 18px; }.hero-strip { padding: 26px 23px; min-height: 270px; }.hero-art { position: absolute; opacity: .45; right: -80px; bottom: -8px; }.stats-grid, .result-grid, .explain-grid, .tracking-grid, .metric-grid { grid-template-columns: 1fr; }.table-card { overflow-x: auto; }.table-row { min-width: 650px; }.steps { gap: 5px; }.step { font-size: 10px; }.step:nth-child(3) { display: none; }.upload-zone { min-height: 310px; }.upload-footer, .image-strip, .matrix-card { display: block; }.upload-footer .button, .image-strip .button { margin-top: 16px; }.result-card, .prob-card { padding: 23px 18px; }.result-card h2 { font-size: 25px; }.result-actions { flex-wrap: wrap; }.result-actions .button { flex: 1; justify-content: center; }.visual { aspect-ratio: 1.3; }.mini-result { flex-wrap: wrap; gap: 8px 14px; }.report-preview { padding: 23px 19px; }.report-details { grid-template-columns: 1fr; }.report-details img, .not-available { height: 130px; }.matrix-placeholder { margin-top: 18px; width: 100%; }.profile span { display: none; } }
+
+/* Print styles to print only the report preview */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+  .sidebar, .topbar, .page-heading, .report-actions, .inline-success, .inline-error {
+    display: none !important;
+  }
+  .content {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  .report-preview {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+}
