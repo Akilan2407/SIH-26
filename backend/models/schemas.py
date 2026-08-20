@@ -1,8 +1,8 @@
 """
 Pydantic models for the Diabetic Retinopathy Screening Chatbot module.
 
-This module ONLY defines the conversational data model. It does not
-touch image analysis, DR grading, PDF generation, or authentication.
+This module defines conversational data models and SHAP request/response
+schemas. It does not touch image analysis, PDF generation, or authentication.
 """
 
 from __future__ import annotations
@@ -81,3 +81,42 @@ class ChatResponse(BaseModel):
     reply: str
     patient_state: Dict[str, Any]
     completed: bool
+
+
+# ----------------------------------------------------------------------
+# SHAP (tabular explainability) schemas
+# ----------------------------------------------------------------------
+
+class SHAPRequest(BaseModel):
+    """
+    Request body for POST /screening/shap.
+
+    Either provide a ``session_id`` (the service loads the persisted session
+    from disk) or supply ``structured_data`` directly — useful for ad-hoc
+    testing without a completed chatbot session.
+    """
+    session_id: str
+    structured_data: Optional[Dict[str, Any]] = None
+
+
+class SHAPFeature(BaseModel):
+    """A single per-feature SHAP entry, ranked by absolute contribution."""
+    feature: str
+    label: str
+    value: float
+    shap: float
+    direction: str          # "increases_risk" | "decreases_risk"
+    imputed: bool
+
+
+class SHAPResponse(BaseModel):
+    """Full response returned by both SHAP endpoints."""
+    session_id: str
+    predicted_grade: int
+    predicted_label: str
+    confidence: float
+    probabilities: Dict[str, float]
+    shap_values: List[SHAPFeature]
+    base_value: float
+    imputed_fields: List[str]
+    summary: str
