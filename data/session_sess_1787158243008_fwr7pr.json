@@ -1,0 +1,125 @@
+{
+  "session_id": "sess_1787158243008_fwr7pr",
+  "structured_data": {
+    "name": "Devasri",
+    "age": 45,
+    "gender": "female",
+    "diabetes_duration": 0.5,
+    "hba1c": null,
+    "blood_pressure": null,
+    "ldl": null,
+    "hdl": null,
+    "triglycerides": null,
+    "hemoglobin": null,
+    "smoking": null,
+    "blurred_vision": null,
+    "floaters": null,
+    "vision_loss": null,
+    "eye_pain": null
+  },
+  "dynamic_data": {},
+  "conversation_history": [
+    {
+      "role": "user",
+      "message": "hi",
+      "timestamp": "2026-08-19T17:53:58.177190+00:00"
+    },
+    {
+      "role": "assistant",
+      "message": "Hello! 👋 I'm Dr. Rita, your virtual screening assistant. I'll ask you a few quick questions about your health before your diabetic retinopathy screening. Could I start by asking your name?",
+      "timestamp": "2026-08-19T17:53:58.177824+00:00"
+    },
+    {
+      "role": "user",
+      "message": "devasri",
+      "timestamp": "2026-08-19T17:54:14.095161+00:00"
+    },
+    {
+      "role": "assistant",
+      "message": "Nice to meet you, Devasri! 😊 How old are you?",
+      "timestamp": "2026-08-19T17:54:14.121167+00:00"
+    },
+    {
+      "role": "user",
+      "message": "45 years old",
+      "timestamp": "2026-08-19T17:54:21.574397+00:00"
+    },
+    {
+      "role": "assistant",
+      "message": "Thank you! Devasri, could you tell me your gender?",
+      "timestamp": "2026-08-19T17:54:21.574978+00:00"
+    },
+    {
+      "role": "user",
+      "message": "female",
+      "timestamp": "2026-08-19T17:54:26.380983+00:00"
+    },
+    {
+      "role": "assistant",
+      "message": "Thanks for sharing that. Devasri, how long have you been living with diabetes?",
+      "timestamp": "2026-08-19T17:54:26.382315+00:00"
+    },
+    {
+      "role": "user",
+      "message": "6 months",
+      "timestamp": "2026-08-19T17:54:33.530639+00:00"
+    },
+    {
+      "role": "assistant",
+      "message": "Great, thank you! Have you had an HbA1c test recently? What was the result?",
+      "timestamp": "2026-08-19T17:54:33.531743+00:00"
+    },
+    {
+      "role": "user",
+      "message": "dont't know",
+      "timestamp": "2026-08-19T17:54:45.431058+00:00"
+    },
+    {
+      "role": "assistant",
+      "message": "Devasri, do you know your most recent HbA1c (A1c) reading?",
+      "timestamp": "2026-08-19T17:54:45.432860+00:00"
+    },
+    {
+      "role": "user",
+      "message": "no",
+      "timestamp": "2026-08-19T17:54:51.659281+00:00"
+    },
+    {
+      "role": "assistant",
+      "message": "Devasri, do you know your most recent HbA1c (A1c) reading?",
+      "timestamp": "2026-08-19T17:54:51.660427+00:00"
+    },
+    {
+      "role": "user",
+      "message": "34",
+      "timestamp": "2026-08-19T17:54:56.331207+00:00"
+    },
+    {
+      "role": "assistant",
+      "message": "Devasri, could you share your latest glycated haemoglobin (HbA1c) value?",
+      "timestamp": "2026-08-19T17:54:56.331803+00:00"
+    },
+    {
+      "role": "user",
+      "message": "56",
+      "timestamp": "2026-08-19T17:55:03.093637+00:00"
+    },
+    {
+      "role": "assistant",
+      "message": "Devasri, do you know your most recent HbA1c (A1c) reading?",
+      "timestamp": "2026-08-19T17:55:03.094079+00:00"
+    },
+    {
+      "role": "user",
+      "message": "no",
+      "timestamp": "2026-08-19T17:55:08.643128+00:00"
+    },
+    {
+      "role": "assistant",
+      "message": "Devasri, do you know your most recent HbA1c (A1c) reading?",
+      "timestamp": "2026-08-19T17:55:08.644165+00:00"
+    }
+  ],
+  "completed": false,
+  "pending_confirmation": null
+}

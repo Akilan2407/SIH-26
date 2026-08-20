@@ -1,0 +1,1 @@
+export function mockReport() { return Promise.resolve({ status: "ready", pdfUrl: null, generatedAt: null }); }

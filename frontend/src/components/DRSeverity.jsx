@@ -1,0 +1,2 @@
+const stages = ["No DR", "Mild", "Moderate", "Severe", "Proliferative"];
+export default function DRSeverity({ active = 2 }) { return <div className="severity"><div className="severity-line" />{stages.map((stage, index) => <div className={`severity-step ${index === active ? "active" : ""} ${index < active ? "passed" : ""}`} key={stage}><span>{index}</span><small>{stage}</small></div>)}</div>; }
