@@ -1,0 +1,15 @@
+# Environment files
+.env
+.env.*
+!.env.example
+*.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+# Data / Sessions
+data/*.json
+data/sessions/
+*.log
